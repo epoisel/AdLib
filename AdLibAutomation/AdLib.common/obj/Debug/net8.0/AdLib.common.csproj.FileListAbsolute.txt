@@ -1,0 +1,15 @@
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0\AdLib.common.deps.json
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0\AdLib.common.runtimeconfig.json
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0\AdLib.common.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0\AdLib.common.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.csproj.AssemblyReference.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.AssemblyInfoInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.AssemblyInfo.cs
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.csproj.CoreCompileInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.sourcelink.json
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\refint\AdLib.common.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\AdLib.common.genruntimeconfig.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0\ref\AdLib.common.dll
