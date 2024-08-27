@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AdLib.Automation\AdLib.Automation.csproj" />
+    <ProjectReference Include="..\AdLib.common\AdLib.common.csproj" />
     <ProjectReference Include="..\AdLib.engine\AdLib.engine.csproj" />
   </ItemGroup>
 

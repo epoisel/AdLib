@@ -11,16 +11,52 @@
       "RelativeMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|solutionrelative:adlib.ui\\automationbuilder.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\adlib.automation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\adlib.automation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\adlib.automation.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\adlib.automation.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.ui\\adlib.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|solutionrelative:adlib.ui\\adlib.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\actions\\clickbuttonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\actions\\clickbuttonaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\actions\\submitaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\actions\\submitaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\actions\\openapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\actions\\openapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\actions\\inputtextaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\actions\\inputtextaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\actions\\focusapplicationaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\actions\\focusapplicationaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\utilities\\nativemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\utilities\\nativemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.automation\\interfaces\\iautomationaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CA038A0-3FEF-448F-8B54-1382EF42F06F}|AdLib.Automation\\AdLib.Automation.csproj|solutionrelative:adlib.automation\\interfaces\\iautomationaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.ui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|solutionrelative:adlib.ui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1B08CED-BFE4-4471-BFE9-3C6B6C55FFA9}|AdLib.engine\\AdLib.engine.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.engine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1B08CED-BFE4-4471-BFE9-3C6B6C55FFA9}|AdLib.engine\\AdLib.engine.csproj|solutionrelative:adlib.engine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.ui\\adlib.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|solutionrelative:adlib.ui\\adlib.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE84B95D-E324-4717-8EF6-49E9A19CD16A}|AdLib.UI\\AdLib.UI.csproj|c:\\users\\epois\\documents\\adlib-2\\adlib\\adlibautomation\\adlib.ui\\adlib.ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -38,8 +74,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -54,32 +94,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdLib.UI",
-              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
-              "RelativeDocumentMoniker": "AdLib.UI\\AdLib.UI.csproj",
-              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
-              "RelativeToolTip": "AdLib.UI\\AdLib.UI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AdLib.Automation.csproj",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj",
+              "RelativeDocumentMoniker": "AdLib.Automation\\AdLib.Automation.csproj",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj",
+              "RelativeToolTip": "AdLib.Automation\\AdLib.Automation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-26T11:20:33.837Z",
+              "WhenOpened": "2024-08-26T16:24:43.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutomationBuilder.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AutomationBuilder.xaml.cs",
+              "RelativeDocumentMoniker": "AdLib.UI\\AutomationBuilder.xaml.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AutomationBuilder.xaml.cs",
+              "RelativeToolTip": "AdLib.UI\\AutomationBuilder.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T11:09:33.247Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdLib.Automation",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj",
+              "RelativeDocumentMoniker": "AdLib.Automation\\AdLib.Automation.csproj",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj",
+              "RelativeToolTip": "AdLib.Automation\\AdLib.Automation.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-27T11:20:20.181Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ClickButtonAction.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\ClickButtonAction.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Actions\\ClickButtonAction.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\ClickButtonAction.cs",
+              "RelativeToolTip": "AdLib.Automation\\Actions\\ClickButtonAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T09:31:40.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SubmitAction.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\SubmitAction.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Actions\\SubmitAction.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\SubmitAction.cs",
+              "RelativeToolTip": "AdLib.Automation\\Actions\\SubmitAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:47:57.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OpenApplication.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\OpenApplication.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Actions\\OpenApplication.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\OpenApplication.cs",
+              "RelativeToolTip": "AdLib.Automation\\Actions\\OpenApplication.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:57:43.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdLib.UI.csproj",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
+              "RelativeDocumentMoniker": "AdLib.UI\\AdLib.UI.csproj",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
+              "RelativeToolTip": "AdLib.UI\\AdLib.UI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-26T11:20:33.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InputTextAction.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\InputTextAction.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Actions\\InputTextAction.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\InputTextAction.cs",
+              "RelativeToolTip": "AdLib.Automation\\Actions\\InputTextAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:47:29.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FocusApplicationAction.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\FocusApplicationAction.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Actions\\FocusApplicationAction.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Actions\\FocusApplicationAction.cs",
+              "RelativeToolTip": "AdLib.Automation\\Actions\\FocusApplicationAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:26:07.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NativeMethods.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Utilities\\NativeMethods.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Utilities\\NativeMethods.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Utilities\\NativeMethods.cs",
+              "RelativeToolTip": "AdLib.Automation\\Utilities\\NativeMethods.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T16:50:11.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAutomationAction.cs",
+              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Interfaces\\IAutomationAction.cs",
+              "RelativeDocumentMoniker": "AdLib.Automation\\Interfaces\\IAutomationAction.cs",
+              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\Interfaces\\IAutomationAction.cs",
+              "RelativeToolTip": "AdLib.Automation\\Interfaces\\IAutomationAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T09:05:27.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "AdLib.UI",
               "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
               "RelativeDocumentMoniker": "AdLib.UI\\AdLib.UI.csproj",
               "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
               "RelativeToolTip": "AdLib.UI\\AdLib.UI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-26T11:22:43.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T11:22:43.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\App.xaml",
               "RelativeDocumentMoniker": "AdLib.UI\\App.xaml",
@@ -91,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\Program.cs",
               "RelativeDocumentMoniker": "AdLib.engine\\Program.cs",
@@ -99,25 +257,11 @@
               "RelativeToolTip": "AdLib.engine\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T11:48:33.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T11:48:33.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AutomationBuilder.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AutomationBuilder.xaml.cs",
-              "RelativeDocumentMoniker": "AdLib.UI\\AutomationBuilder.xaml.cs",
-              "ToolTip": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AutomationBuilder.xaml.cs",
-              "RelativeToolTip": "AdLib.UI\\AutomationBuilder.xaml.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAgwAwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T11:09:33.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AdLib.UI\\MainWindow.xaml",

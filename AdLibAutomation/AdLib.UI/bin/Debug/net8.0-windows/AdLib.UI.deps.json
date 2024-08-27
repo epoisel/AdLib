@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "AdLib.UI/1.0.0": {
         "dependencies": {
+          "AdLib.Automation": "1.0.0",
+          "AdLib.common": "1.0.0",
           "AdLib.engine": "1.0.0",
           "FluentValidation": "11.9.2",
           "Microsoft.CodeAnalysis.CSharp.Scripting": "4.11.0",
@@ -470,6 +472,22 @@
           "System.Drawing.Common": "4.7.0"
         }
       },
+      "AdLib.Automation/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "Microsoft.CodeAnalysis.CSharp.Scripting": "4.11.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Serilog": "4.0.1",
+          "System.Data.SQLite": "1.0.118"
+        },
+        "runtime": {
+          "AdLib.Automation.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "AdLib.common/1.0.0": {
         "dependencies": {
           "FluentValidation": "11.9.2",
@@ -755,6 +773,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "AdLib.Automation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "AdLib.common/1.0.0": {
       "type": "project",

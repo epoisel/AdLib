@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdLib.engine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+292b146b28da3a5a814776bf7415e2aa343733dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d018476c4527ab64a464b5256e4f5dde59571b47")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdLib.engine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdLib.engine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
