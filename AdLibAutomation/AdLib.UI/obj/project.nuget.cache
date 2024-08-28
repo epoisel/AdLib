@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CQw4nzaXdDw=",
+  "dgSpecHash": "MjMTVAq3jfg=",
   "success": true,
   "projectFilePath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\epois\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\epois\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\epois\\.nuget\\packages\\inputsimulatorstandard\\1.0.0\\inputsimulatorstandard.1.0.0.nupkg.sha512",
     "C:\\Users\\epois\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
     "C:\\Users\\epois\\.nuget\\packages\\microsoft.codeanalysis.common\\4.11.0\\microsoft.codeanalysis.common.4.11.0.nupkg.sha512",
     "C:\\Users\\epois\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.11.0\\microsoft.codeanalysis.csharp.4.11.0.nupkg.sha512",

@@ -6,11 +6,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <!-- Toolbox -->
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
             <!-- Workspace -->
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="264"/>
             <!-- Properties Panel -->
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="174"/>
             <!-- Execution Panel -->
         </Grid.ColumnDefinitions>
 
@@ -48,35 +48,29 @@
         </Canvas>
 
         <!-- Properties Panel -->
-        <StackPanel x:Name="PropertiesPanelContent" 
-        Grid.Column="2" 
-    HorizontalAlignment="Center" 
-        VerticalAlignment="Top" 
-        Width="200">
-            <TextBlock Text="Action Properties" FontWeight="Bold" Margin="0"/>
-            <!-- Dynamic properties for selected action will be added here -->
+        <StackPanel Grid.Column="2" Background="LightGray">
+            <TextBlock Text="Properties" FontWeight="Bold" Margin="10"/>
+            <StackPanel Name="PropertiesPanelContent" Margin="10"/>
+            <!-- This StackPanel is used to dynamically add property controls -->
+            <!-- Add to Workflow Button -->
+            <Button x:Name="AddToWorkflowButton" 
+     Grid.Column="2" 
+     Content="Add to Workflow" 
+     Click="AddToWorkflowButton_Click" 
+     Margin="22,282,145,282" Height="20" Width="97"/>
         </StackPanel>
 
-        <!-- Add to Workflow Button -->
-        <Button x:Name="AddToWorkflowButton" 
-    Grid.Column="2" 
-    Content="Add to Workflow" 
-    Click="AddToWorkflowButton_Click" 
-    HorizontalAlignment="Right" 
-    VerticalAlignment="Bottom" 
-    Margin="5"/>
-        
+       
         <!-- Execution List -->
-        <ListBox x:Name="ExecutionListBox" 
+        <StackPanel Grid.Column="3" Background="LightGray">
+            <ListBox x:Name="ExecutionListBox" 
                  Grid.Column="3" 
             ItemsSource="{Binding automationActions}" 
                  DisplayMemberPath="Name"
                  SelectedItem="{Binding SelectedAction, Mode=TwoWay}" 
-                 HorizontalAlignment="Right" 
-                 VerticalAlignment="Top" 
-                 Width="250" Height="400"
-                 Margin="10"/>
-
+                  Height="400"/>
+            <Button Content="Run Workflow" Click="RunWorkflow" Margin="5"/>
+        </StackPanel>
 
     </Grid>
 </Window>

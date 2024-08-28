@@ -10,6 +10,9 @@ using System.Windows.Media;
 using Microsoft.Win32;
 using AdLib.Automation.Interfaces;
 using AdLib.Automation.Actions;
+using AdLib.Common.Interfaces;
+using AdLib.Common.Utilities;
+using AdLib.UI.Services;
 
 namespace AdLib.UI
 {
@@ -18,11 +21,24 @@ namespace AdLib.UI
         private List<Type> availableActions = new List<Type>();
         private ObservableCollection<IAutomationAction> automationActions = new ObservableCollection<IAutomationAction>();
         private IAutomationAction selectedAction;
+        private readonly IWindowSelectionService _windowSelectionService;
 
         public AutomationBuilder()
         {
             InitializeComponent();
+            _windowSelectionService = new WindowSelectionService(); // Instance of the selection service
             LoadAvailableActions(); // Dynamically load and create buttons for available actions
+        }
+
+        // Show Window Selection Dialog when configuring InputTextAction
+        private void ConfigureInputTextAction(InputTextAction inputTextAction)
+        {
+            var windows = WindowEnumerator.GetOpenWindows(); // Get the list of open windows
+            var selectionDialog = new WindowSelectionDialog(windows); // Create a new instance of the dialog
+            if (selectionDialog.ShowDialog() == true) // Show the dialog and check if OK was clicked
+            {
+                inputTextAction.SelectedWindow = selectionDialog.SelectedWindow; // Set the selected window
+            }
         }
 
         // Load all available actions and create buttons in the toolbox
@@ -45,6 +61,7 @@ namespace AdLib.UI
             {
                 if (Activator.CreateInstance(type) is IAutomationAction actionInstance)
                 {
+                    // Configure actions dynamically but only call dialog when user interacts
                     var button = new Button
                     {
                         Content = actionInstance.Name,
@@ -64,6 +81,12 @@ namespace AdLib.UI
             {
                 if (Activator.CreateInstance(actionType) is IAutomationAction action)
                 {
+                    // Inject the window selection service if needed
+                    if (action is InputTextAction inputTextAction)
+                    {
+                        inputTextAction.SetWindowSelectionService(_windowSelectionService);
+                    }
+
                     AddActionToWorkspace(action);
                 }
             }
@@ -130,6 +153,8 @@ namespace AdLib.UI
         }
 
         // Show properties of selected action dynamically
+        // Show properties of selected action dynamically
+        // Show properties of selected action dynamically
         private void ShowProperties(IAutomationAction action)
         {
             selectedAction = action;
@@ -141,35 +166,59 @@ namespace AdLib.UI
                 if (property.CanRead && property.CanWrite)
                 {
                     TextBlock label = new TextBlock { Text = $"{property.Name}:", Margin = new Thickness(5) };
-                    TextBox textBox = new TextBox
-                    {
-                        Text = property.GetValue(action)?.ToString(),
-                        Margin = new Thickness(5),
-                        Width = 200
-                    };
 
-                    textBox.TextChanged += (s, e) =>
+                    if (property.Name == "SelectedWindow" && action is InputTextAction inputTextAction)
                     {
-                        try
+                        TextBox textBox = new TextBox
                         {
-                            var value = Convert.ChangeType(textBox.Text, property.PropertyType);
-                            property.SetValue(action, value);
+                            Text = inputTextAction.SelectedWindow?.Title ?? "Click to select a window...",
+                            Margin = new Thickness(5),
+                            Width = 200,
+                            IsReadOnly = true // Make the textbox read-only
+                        };
 
-                            if (property.Name == "Name")
-                            {
-                                UpdateActionName(action); // Update the action name in the UI
-                                UpdateExecutionPanel(); // Ensure the execution list reflects the new name
-                            }
-                            else if (property.Name == "ApplicationPath" && action is OpenApplicationAction openAppAction)
-                            {
-                                UpdateExePathDisplay(openAppAction); // Update the display for selected EXE path
-                            }
-                        }
-                        catch { }
-                    };
+                        // Attach the event handler to open the WindowSelectionDialog
+                        textBox.GotFocus += (s, e) =>
+                        {
+                            ConfigureInputTextAction(inputTextAction); // Open the dialog on focus
+                            textBox.Text = inputTextAction.SelectedWindow?.Title ?? "No window selected";
+                        };
 
-                    PropertiesPanelContent.Children.Add(label);
-                    PropertiesPanelContent.Children.Add(textBox);
+                        PropertiesPanelContent.Children.Add(label);
+                        PropertiesPanelContent.Children.Add(textBox);
+                    }
+                    else
+                    {
+                        TextBox textBox = new TextBox
+                        {
+                            Text = property.GetValue(action)?.ToString(),
+                            Margin = new Thickness(5),
+                            Width = 200
+                        };
+
+                        textBox.TextChanged += (s, e) =>
+                        {
+                            try
+                            {
+                                var value = Convert.ChangeType(textBox.Text, property.PropertyType);
+                                property.SetValue(action, value);
+
+                                if (property.Name == "Name")
+                                {
+                                    UpdateActionName(action); // Update the action name in the UI
+                                    UpdateExecutionPanel(); // Ensure the execution list reflects the new name
+                                }
+                                else if (property.Name == "ApplicationPath" && action is OpenApplicationAction openAppAction)
+                                {
+                                    UpdateExePathDisplay(openAppAction); // Update the display for selected EXE path
+                                }
+                            }
+                            catch { }
+                        };
+
+                        PropertiesPanelContent.Children.Add(label);
+                        PropertiesPanelContent.Children.Add(textBox);
+                    }
                 }
 
                 // Special handling for ApplicationPath property
@@ -202,13 +251,13 @@ namespace AdLib.UI
 
         private void AddToWorkflowButton_Click(object sender, RoutedEventArgs e)
         {
-            // Assuming selectedAction is the action to be added to the workflow
             if (selectedAction != null && !automationActions.Contains(selectedAction))
             {
                 automationActions.Add(selectedAction);
                 UpdateExecutionPanel(); // Refresh the execution panel to reflect the new action
             }
         }
+
         // Update the text displayed in the action block
         private void UpdateActionName(IAutomationAction action)
         {
@@ -231,7 +280,6 @@ namespace AdLib.UI
         // Method to visually display the selected EXE path in the properties panel
         private void UpdateExePathDisplay(OpenApplicationAction action)
         {
-            // Locate the corresponding TextBox in the properties panel and update it
             foreach (var item in PropertiesPanelContent.Children)
             {
                 if (item is TextBox textBox && textBox.Text == action.ApplicationPath)
@@ -277,13 +325,18 @@ namespace AdLib.UI
         }
 
         // Execute the workflow
-        private void RunWorkflow(object sender, RoutedEventArgs e)
+          private void RunWorkflow(object sender, RoutedEventArgs e)
         {
             foreach (var action in automationActions)
             {
                 try
                 {
                     ExecutionListBox.SelectedItem = action;
+                    // Show window selection dialog if needed
+                    if (action is InputTextAction inputTextAction)
+                    {
+                        ConfigureInputTextAction(inputTextAction);
+                    }
                     action.Execute();
                 }
                 catch (Exception ex)
