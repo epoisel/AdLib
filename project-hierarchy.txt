@@ -7,11 +7,11 @@ AdLib
 │  │  │  ├─ DesignTimeBuild
 │  │  │  │  └─ .dtbcache.v2
 │  │  │  ├─ FileContentIndex
-│  │  │  │  ├─ 017f6f61-3b3b-434d-8b41-879711506b41.vsidx
-│  │  │  │  ├─ 54d66915-274d-481a-83ea-4108b62308a7.vsidx
-│  │  │  │  ├─ 6fe22d4e-f6dd-41be-a83d-293ed726e357.vsidx
-│  │  │  │  ├─ c6d992fe-edd3-4d50-93bc-6dcf2d658626.vsidx
-│  │  │  │  └─ fcfcd3c7-a8e5-4d43-bd02-af799e224010.vsidx
+│  │  │  │  ├─ 62bda935-01a1-4c64-bcb6-8af265b332ff.vsidx
+│  │  │  │  ├─ 6c4b20fb-c791-4f78-b0d4-e3f89f34b970.vsidx
+│  │  │  │  ├─ a59df673-cb70-4cbd-b888-1e5714c7f7fa.vsidx
+│  │  │  │  ├─ b5d06add-0b6c-4ce9-9bad-cae0afc7fde7.vsidx
+│  │  │  │  └─ ec7383ab-2f69-4f1a-9890-69cd88fd1280.vsidx
 │  │  │  └─ v17
 │  │  │     ├─ .futdcache.v2
 │  │  │     ├─ .suo
@@ -31,16 +31,24 @@ AdLib
 │  │  │  ├─ OpenApplication.cs
 │  │  │  └─ SubmitAction.cs
 │  │  ├─ AdLib.Automation.csproj
+│  │  ├─ AutomationActionFactory.cs
 │  │  ├─ Interfaces
 │  │  │  └─ IAutomationAction.cs
 │  │  ├─ Properties
+│  │  ├─ Services
 │  │  └─ Utilities
 │  │     └─ NativeMethods.cs
 │  ├─ AdLib.common
 │  │  ├─ AdLib.common.csproj
-│  │  └─ Plugins
-│  │     ├─ IAutomationPlugin.cs
-│  │     └─ TestPlugin.cs
+│  │  ├─ Interfaces
+│  │  │  ├─ IConfigurableAction.cs
+│  │  │  └─ IWindowSelectionService.cs
+│  │  ├─ Plugins
+│  │  │  ├─ IAutomationPlugin.cs
+│  │  │  └─ TestPlugin.cs
+│  │  └─ Utilities
+│  │     ├─ WindowEnumerator.cs
+│  │     └─ WindowInfo.cs
 │  ├─ AdLib.engine
 │  │  ├─ AdLib.engine.csproj
 │  │  ├─ Program.cs
@@ -55,7 +63,11 @@ AdLib
 │  │  ├─ AutomationBuilder.xaml
 │  │  ├─ AutomationBuilder.xaml.cs
 │  │  ├─ MainWindow.xaml
-│  │  └─ MainWindow.xaml.cs
+│  │  ├─ MainWindow.xaml.cs
+│  │  ├─ Services
+│  │  │  └─ WindowSelectionService.cs
+│  │  ├─ WindowSelectionDialog.xaml
+│  │  └─ WindowSelectionDialog.xaml.cs
 │  └─ AdLibAutomation.sln
 ├─ Plugins
 │  └─ AdLib.common.dll

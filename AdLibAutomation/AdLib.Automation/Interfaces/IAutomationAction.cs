@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdLib.Common.Interfaces;
+using System;
 
 namespace AdLib.Automation.Interfaces
 {
@@ -8,8 +9,9 @@ namespace AdLib.Automation.Interfaces
     {
         string Name { get; }
         void Execute();
-        bool Validate();              // Validates if the action is configured correctly
+        bool Validate();              // Ensures the action is correctly configured
         string Description { get; }   // Provides a description of the action
-        event ActionCompletedHandler OnActionCompleted; // Event that triggers when the action is completed
+        event ActionCompletedHandler OnActionCompleted; // Triggers when the action is completed
+        void Configure(IWindowSelectionService windowSelectionService); // Allows configuration of the action before execution
     }
 }

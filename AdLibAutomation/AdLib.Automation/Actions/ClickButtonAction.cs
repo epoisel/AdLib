@@ -1,38 +1,39 @@
-﻿using System;
+﻿// ClickButtonAction.cs
+using System;
 using System.Windows; // For MessageBox (if needed)
 using AdLib.Automation.Interfaces;
+using AdLib.Common.Interfaces; // Assuming the click service is defined here
 
 namespace AdLib.Automation.Actions
 {
-    public class ClickButtonAction : IAutomationAction
+    public class ClickButtonAction : IAutomationAction, IConfigurableAction
     {
+        private readonly IButtonClickService _buttonClickService;
+
         public string Name { get; set; } = "Click Button";
         public string ButtonIdentifier { get; set; } // Identifier for the button (could be an ID, name, etc.)
 
-        // Implement the Description property
         public string Description => "Simulates a click on a specified button in the user interface.";
 
-        // Implement the OnActionCompleted event
         public event ActionCompletedHandler OnActionCompleted;
 
-        // Implement the Validate method to check if ButtonIdentifier is set
+        public ClickButtonAction(IButtonClickService buttonClickService)
+        {
+            _buttonClickService = buttonClickService ?? throw new ArgumentNullException(nameof(buttonClickService));
+        }
+
         public bool Validate()
         {
             return !string.IsNullOrEmpty(ButtonIdentifier);
         }
 
-        // Implement the Execute method to perform the button click action
         public void Execute()
         {
             if (Validate())
             {
                 try
                 {
-                    // Logic to find and click the button
-                    // Example: Locate button using ButtonIdentifier and simulate click
-                    // This is a placeholder. Replace with actual logic to find and click the button.
-
-                    // Raise the OnActionCompleted event after action execution
+                    _buttonClickService.ClickButton(ButtonIdentifier);
                     RaiseOnActionCompleted();
                 }
                 catch (Exception ex)
@@ -46,7 +47,12 @@ namespace AdLib.Automation.Actions
             }
         }
 
-        // Method to raise the OnActionCompleted event
+        // Implement the Configure method to meet the interface contract
+        public void Configure(IWindowSelectionService windowSelectionService)
+        {
+            // Configuration logic if required
+        }
+
         protected virtual void RaiseOnActionCompleted()
         {
             OnActionCompleted?.Invoke(this, EventArgs.Empty);

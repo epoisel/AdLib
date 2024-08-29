@@ -1,21 +1,27 @@
-﻿using System;
+﻿// FocusApplicationAction.cs
+using System;
 using System.Diagnostics;
 using System.Windows;
-using AdLib.Automation.Utilities;
 using AdLib.Automation.Interfaces;
+using AdLib.Common.Interfaces;
 
 namespace AdLib.Automation.Actions
 {
-    public class FocusApplicationAction : IAutomationAction
+    public class FocusApplicationAction : IAutomationAction, IConfigurableAction
     {
+        private readonly IProcessService _processService;
+
         public string Name { get; set; } = "Focus Application";
         public string ApplicationName { get; set; }
 
-        // Implement the Description property
         public string Description => "Brings the specified application window to the foreground.";
 
-        // Implement the OnActionCompleted event
         public event ActionCompletedHandler OnActionCompleted;
+
+        public FocusApplicationAction(IProcessService processService)
+        {
+            _processService = processService;
+        }
 
         public void Execute()
         {
@@ -23,12 +29,10 @@ namespace AdLib.Automation.Actions
             {
                 try
                 {
-                    Process[] processes = Process.GetProcessesByName(ApplicationName);
+                    Process[] processes = _processService.GetProcessesByName(ApplicationName);
                     if (processes.Length > 0)
                     {
-                        NativeMethods.SetForegroundWindow(processes[0].MainWindowHandle);
-
-                        // Raise the OnActionCompleted event after action execution
+                        _processService.SetForegroundWindow(processes[0].MainWindowHandle);
                         RaiseOnActionCompleted();
                     }
                     else
@@ -47,13 +51,16 @@ namespace AdLib.Automation.Actions
             }
         }
 
-        // Implement the Validate method to check if ApplicationName is set
         public bool Validate()
         {
             return !string.IsNullOrEmpty(ApplicationName);
         }
 
-        // Method to raise the OnActionCompleted event
+        public void Configure(IWindowSelectionService windowSelectionService)
+        {
+            // Configuration logic if necessary
+        }
+
         protected virtual void RaiseOnActionCompleted()
         {
             OnActionCompleted?.Invoke(this, EventArgs.Empty);

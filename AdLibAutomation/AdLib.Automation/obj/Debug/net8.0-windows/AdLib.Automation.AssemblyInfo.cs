@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdLib.Automation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b92131819136052cadd245a40e3f40776ea241")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca02eb29a4e201f52ceb4cc4db6bf4243bd0ad2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdLib.Automation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdLib.Automation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

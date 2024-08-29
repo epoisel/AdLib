@@ -14,8 +14,19 @@ C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\Serilog.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\System.Data.SQLite.dll
@@ -89,7 +100,6 @@ C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\AdLib.common.pdb
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\bin\Debug\net8.0-windows\AdLib.engine.pdb
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AdLib.UI.csproj.AssemblyReference.cache
-C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AutomationBuilder.baml
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\WindowSelectionDialog.baml
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AutomationBuilder.g.cs
@@ -97,6 +107,8 @@ C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\WindowSelectionDialog.g.cs
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AdLib.UI_MarkupCompile.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AdLib.UI_MarkupCompile.lref
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AutomationBuilder.baml
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AdLib.UI.g.resources
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AdLib.UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.UI\obj\Debug\net8.0-windows\AdLib.UI.AssemblyInfoInputs.cache
