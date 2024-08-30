@@ -10,21 +10,44 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Dialogs\WindowSelectionDialog.cs" />
+    <Compile Remove="MainWindow.xaml.cs" />
+    <Compile Remove="MarkupExtensions\ServiceProviderExtension.cs" />
+    
+    <Compile Remove="Services\WindowSelectionService.cs" />
+    <Compile Remove="ViewModels\ViewModelLocator.cs" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="MainWindow.xaml" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.0" />
     <PackageReference Include="FluentValidation" Version="11.9.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.11.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Serilog" Version="4.0.1" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+    <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AdLib.Automation\AdLib.Automation.csproj" />
     <ProjectReference Include="..\AdLib.common\AdLib.common.csproj" />
     <ProjectReference Include="..\AdLib.engine\AdLib.engine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+    <Folder Include="MarkupExtensions\" />
   </ItemGroup>
 
 </Project>

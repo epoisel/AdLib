@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AdLib.Automation.Actions;
+//using AdLib.Automation.Actions;
 using AdLib.Automation.Interfaces;
 
 namespace AdLib.Automation
@@ -11,12 +11,12 @@ namespace AdLib.Automation
     {
         private static readonly Dictionary<string, Type> ActionTypes = new Dictionary<string, Type>
         {
-            { "ClickButtonAction", typeof(ClickButtonAction) },
-            { "CloseApplicationAction", typeof(CloseApplicationAction) },
-            { "FocusApplicationAction", typeof(FocusApplicationAction) },
-            { "InputTextAction", typeof(InputTextAction) },
-            { "OpenApplicationAction", typeof(OpenApplicationAction) },
-            { "SubmitAction", typeof(SubmitAction) }
+            //{ "ClickButtonAction", typeof(ClickButtonAction) },
+            //{ "CloseApplicationAction", typeof(CloseApplicationAction) },
+            //{ "FocusApplicationAction", typeof(FocusApplicationAction) },
+            //{ "InputTextAction", typeof(InputTextAction) },
+            //{ "OpenApplicationAction", typeof(OpenApplicationAction) },
+            //{ "SubmitAction", typeof(SubmitAction) }
         };
 
         public static List<Type> GetAvailableActions()

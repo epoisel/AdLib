@@ -2,6 +2,7 @@
 using System;
 using System.Windows; // For MessageBox (if needed)
 using AdLib.Automation.Interfaces;
+using AdLib.common.Interfaces;
 using AdLib.Common.Interfaces; // Assuming the click service is defined here
 
 namespace AdLib.Automation.Actions

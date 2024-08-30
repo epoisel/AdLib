@@ -2,14 +2,11 @@
 using Microsoft.Extensions.Logging;
 using System;
 using System.Windows;
-using AdLib.UI;
+using AdLib.UI.ViewModels;
 using AdLib.UI.Services;
-using AdLib.Common.Interfaces;
-using AdLib.Automation.Actions;
-using AdLib.Automation.Interfaces;
 using AdLib.Common.Services;
 
-namespace AdLib
+namespace AdLib.UI
 {
     public partial class App : Application
     {
@@ -20,60 +17,42 @@ namespace AdLib
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
             _serviceProvider = serviceCollection.BuildServiceProvider();
-            _serviceProvider = serviceCollection.BuildServiceProvider();
-            var logger = _serviceProvider.GetService<ILogger<App>>();
-            if (logger != null)
-            {
-                logger.LogInformation("Service provider initialized successfully.");
-            }
-            else
-            {
-                Console.WriteLine("Logger not initialized. Check service provider setup.");
-            }
-
         }
 
         private void ConfigureServices(IServiceCollection services)
         {
-            // Registering services
-            services.AddSingleton<IWindowSelectionService, WindowSelectionService>();
-            services.AddTransient<IButtonClickService, ButtonClickService>();
-            services.AddTransient<IProcessService, ProcessService>();
-            services.AddSingleton<ILoggerFactory, LoggerFactory>();
-            services.AddLogging(loggingBuilder =>
-            {
-                loggingBuilder.AddConsole();
-                loggingBuilder.AddDebug();
-            });
+            // Register ViewModels and Main Window
+            services.AddSingleton<AutomationBuilderViewModel>();
+            services.AddSingleton<AutomationBuilder>();
 
-            services.AddLogging(configure => configure.AddConsole().AddDebug()); // Ensure logging setup
+            // Register ActionManager - keeping this as it might still be needed even without actions
+            services.AddSingleton<IActionManager, ActionManager>();
 
-            // Registering automation actions
-            services.AddTransient<ClickButtonAction>();
-            services.AddTransient<FocusApplicationAction>();
-            services.AddTransient<InputTextAction>();
-            services.AddTransient<OpenApplicationAction>();
-            services.AddTransient<SubmitAction>();
-            services.AddTransient<CloseApplicationAction>();
+            // For now, we are not registering specific IAutomationAction implementations
+            // This can be reintroduced once individual actions are ready for refactoring
 
-            // Register the AutomationBuilder window
-            services.AddSingleton<AutomationBuilder>(provider =>
-            {
-                var windowSelectionService = provider.GetRequiredService<IWindowSelectionService>();
-                var logger = provider.GetRequiredService<ILogger<AutomationBuilder>>();
-                return new AutomationBuilder(provider, windowSelectionService, logger);
-            });
+            // Configure logging
+            services.AddLogging(configure => configure.AddConsole().AddDebug());
         }
-
 
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var automationBuilder = AutomationBuilder.WindowFactory.CreateAutomationBuilder(_serviceProvider);
-            var logger = _serviceProvider.GetRequiredService<ILogger<AutomationBuilder>>();
-            logger.LogInformation("AutomationBuilder window is being shown.");
-            automationBuilder.Show();
-        }
 
+            Console.WriteLine("OnStartup called"); // Debug line
+
+            try
+            {
+                var mainWindow = _serviceProvider.GetRequiredService<AutomationBuilder>();
+                mainWindow.Show();
+                Console.WriteLine("Main window shown successfully"); // Debug line
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error showing main window: {ex.Message}");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Shutdown(); // Shut down the application if the main window can't be shown
+            }
+        }
     }
 }

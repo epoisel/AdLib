@@ -2,7 +2,8 @@
 using System;
 using System.Windows;
 using AdLib.Automation.Interfaces;
-using AdLib.Automation.Utilities;
+using AdLib.common.Interfaces;
+using AdLib.common.Utilities;
 using AdLib.Common.Interfaces; // For the window selection service
 using AdLib.Common.Utilities;  // Assuming NativeMethods is defined here
 using InputSimulatorStandard;  // Assuming InputSimulator is being used for text input simulation

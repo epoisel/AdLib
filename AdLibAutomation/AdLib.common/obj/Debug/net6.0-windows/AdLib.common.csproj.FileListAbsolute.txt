@@ -1,0 +1,6 @@
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net6.0-windows\AdLib.common.csproj.AssemblyReference.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net6.0-windows\AdLib.common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net6.0-windows\AdLib.common.AssemblyInfoInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net6.0-windows\AdLib.common.AssemblyInfo.cs
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net6.0-windows\AdLib.common.csproj.CoreCompileInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net6.0-windows\AdLib.common.sourcelink.json

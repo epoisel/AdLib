@@ -1,0 +1,15 @@
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.common.deps.json
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.common.runtimeconfig.json
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.common.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.common.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.csproj.AssemblyReference.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.AssemblyInfoInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.AssemblyInfo.cs
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.csproj.CoreCompileInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.sourcelink.json
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\refint\AdLib.common.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.common.genruntimeconfig.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\ref\AdLib.common.dll

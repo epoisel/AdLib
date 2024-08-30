@@ -1,7 +1,7 @@
 ﻿// IConfigurableAction.cs
 using AdLib.Common.Interfaces;
 
-namespace AdLib.Automation.Interfaces
+namespace AdLib.common.Interfaces
 {
     public interface IConfigurableAction
     {
@@ -10,7 +10,7 @@ namespace AdLib.Automation.Interfaces
 }
 
 // IRequiresFilePathAction.cs
-namespace AdLib.Automation.Interfaces
+namespace AdLib.common.Interfaces
 {
     public interface IRequiresFilePathAction
     {

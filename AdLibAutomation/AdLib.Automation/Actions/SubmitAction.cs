@@ -19,7 +19,7 @@ namespace AdLib.Automation.Actions
             OnActionCompleted?.Invoke(this, EventArgs.Empty);
         }
 
-        public void Configure(IWindowSelectionService windowSelectionService)
+        public void Configure(IWindowSelectionDialog windowSelectionService)
         {
             // Add configuration logic if necessary
         }
