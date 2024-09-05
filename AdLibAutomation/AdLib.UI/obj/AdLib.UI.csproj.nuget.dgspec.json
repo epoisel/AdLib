@@ -4,14 +4,14 @@
     "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.UI\\AdLib.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj": {
+    "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj",
-        "projectName": "AdLib.Automation",
-        "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj",
+        "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj",
+        "projectName": "AdLib.Common",
+        "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj",
         "packagesPath": "C:\\Users\\epois\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\obj\\",
+        "outputPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj": {
-                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj"
+              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj": {
+                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj"
               }
             }
           }
@@ -62,10 +62,6 @@
               "target": "Package",
               "version": "[11.9.2, )"
             },
-            "InputSimulatorStandard": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
             "Microsoft.CodeAnalysis.CSharp.Scripting": {
               "target": "Package",
               "version": "[4.11.0, )"
@@ -130,130 +126,12 @@
         }
       }
     },
-    "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj": {
+    "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj",
-        "projectName": "AdLib.common",
-        "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj",
-        "packagesPath": "C:\\Users\\epois\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\epois\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0-windows"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "CommunityToolkit.Mvvm": {
-              "target": "Package",
-              "version": "[8.3.0, )"
-            },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.9.2, )"
-            },
-            "Microsoft.CodeAnalysis.CSharp.Scripting": {
-              "target": "Package",
-              "version": "[4.11.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Logging.Console": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Windows.Compatibility": {
-              "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "[4.0.1, )"
-            },
-            "System.Data.SQLite": {
-              "target": "Package",
-              "version": "[1.0.118, )"
-            },
-            "System.Windows.Extensions": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.engine.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.engine.csproj",
-        "projectName": "AdLib.engine",
-        "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.engine.csproj",
+        "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj",
+        "projectName": "AdLib.Engine",
+        "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj",
         "packagesPath": "C:\\Users\\epois\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\obj\\",
         "projectStyle": "PackageReference",
@@ -277,8 +155,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj": {
-                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj"
+              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj": {
+                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj"
               }
             }
           }
@@ -396,14 +274,14 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj": {
-                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.Automation\\AdLib.Automation.csproj"
-              },
-              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj": {
-                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj"
+              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj": {
+                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj"
               },
               "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.engine.csproj": {
                 "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.engine.csproj"
+              },
+              "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj": {
+                "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj"
               }
             }
           }
@@ -489,6 +367,77 @@
             },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj",
+        "projectName": "AdLib.Contracts",
+        "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj",
+        "packagesPath": "C:\\Users\\epois\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\epois\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"

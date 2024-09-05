@@ -1904,6 +1904,44 @@
             "rid": "win"
           }
         }
+      },
+      "AdLib.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.2"
+        },
+        "compile": {
+          "bin/placeholder/AdLib.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdLib.Contracts.dll": {}
+        }
+      },
+      "AdLib.Engine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AdLib.Contracts": "1.0.0",
+          "CommunityToolkit.Mvvm": "8.3.0",
+          "FluentValidation": "11.9.2",
+          "Microsoft.CodeAnalysis.CSharp.Scripting": "4.11.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.Extensions.Logging.Debug": "8.0.0",
+          "Microsoft.Windows.Compatibility": "8.0.8",
+          "Newtonsoft.Json": "13.0.3",
+          "Serilog": "4.0.1",
+          "System.Data.SQLite": "1.0.118",
+          "System.Windows.Extensions": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AdLib.Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdLib.Engine.dll": {}
+        }
       }
     }
   },
@@ -5715,10 +5753,21 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "AdLib.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../../Contracts/AdLib.Contracts.csproj",
+      "msbuildProject": "../../Contracts/AdLib.Contracts.csproj"
+    },
+    "AdLib.Engine/1.0.0": {
+      "type": "project",
+      "path": "../AdLib.engine/AdLib.Engine.csproj",
+      "msbuildProject": "../AdLib.engine/AdLib.Engine.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "AdLib.Engine >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.3.0",
       "FluentValidation >= 11.9.2",
       "Microsoft.CodeAnalysis.CSharp.Scripting >= 4.11.0",
@@ -5740,9 +5789,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj",
-      "projectName": "AdLib.common",
-      "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.common.csproj",
+      "projectUniqueName": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj",
+      "projectName": "AdLib.Common",
+      "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\AdLib.Common.csproj",
       "packagesPath": "C:\\Users\\epois\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.common\\obj\\",
       "projectStyle": "PackageReference",
@@ -5765,7 +5814,11 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj": {
+              "projectPath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

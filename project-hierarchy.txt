@@ -7,11 +7,11 @@ AdLib
 │  │  │  ├─ DesignTimeBuild
 │  │  │  │  └─ .dtbcache.v2
 │  │  │  ├─ FileContentIndex
-│  │  │  │  ├─ 62bda935-01a1-4c64-bcb6-8af265b332ff.vsidx
-│  │  │  │  ├─ 6c4b20fb-c791-4f78-b0d4-e3f89f34b970.vsidx
-│  │  │  │  ├─ a59df673-cb70-4cbd-b888-1e5714c7f7fa.vsidx
-│  │  │  │  ├─ b5d06add-0b6c-4ce9-9bad-cae0afc7fde7.vsidx
-│  │  │  │  └─ ec7383ab-2f69-4f1a-9890-69cd88fd1280.vsidx
+│  │  │  │  ├─ 40f44e44-3d6e-4bab-bd9e-126f6d381570.vsidx
+│  │  │  │  ├─ 7a419221-53dd-4635-87ed-e124839f8da2.vsidx
+│  │  │  │  ├─ cb015c6d-b28f-4522-ac83-46cab706f555.vsidx
+│  │  │  │  ├─ db3312a7-a6bb-4b30-8100-19a8baf3c44f.vsidx
+│  │  │  │  └─ e03c354b-c227-44be-a9b8-cad9f7e66af1.vsidx
 │  │  │  └─ v17
 │  │  │     ├─ .futdcache.v2
 │  │  │     ├─ .suo
@@ -24,36 +24,46 @@ AdLib
 │  │  └─ sd
 │  ├─ AdLib.Automation
 │  │  ├─ Actions
+│  │  │  ├─ BaseAction.cs
 │  │  │  ├─ ClickButtonAction.cs
-│  │  │  ├─ CloseApplication.cs
+│  │  │  ├─ CloseApplicationAction.cs
 │  │  │  ├─ FocusApplicationAction.cs
 │  │  │  ├─ InputTextAction.cs
 │  │  │  ├─ OpenApplication.cs
+│  │  │  ├─ OpenApplicationAction.cs
 │  │  │  └─ SubmitAction.cs
 │  │  ├─ AdLib.Automation.csproj
-│  │  ├─ AutomationActionFactory.cs
 │  │  ├─ Interfaces
-│  │  │  └─ IAutomationAction.cs
 │  │  ├─ Properties
+│  │  │  └─ PublishProfiles
 │  │  ├─ Services
 │  │  └─ Utilities
-│  │     └─ NativeMethods.cs
 │  ├─ AdLib.common
-│  │  ├─ AdLib.common.csproj
+│  │  ├─ AdLib.Common.csproj
+│  │  ├─ Factories
+│  │  │  └─ ActionFactory.cs
 │  │  ├─ Interfaces
-│  │  │  ├─ IConfigurableAction.cs
-│  │  │  └─ IWindowSelectionService.cs
+│  │  │  └─ IProcessService.cs
 │  │  ├─ Plugins
 │  │  │  ├─ IAutomationPlugin.cs
 │  │  │  └─ TestPlugin.cs
+│  │  ├─ Services
+│  │  │  └─ ActionManager.cs
 │  │  └─ Utilities
-│  │     ├─ WindowEnumerator.cs
-│  │     └─ WindowInfo.cs
 │  ├─ AdLib.engine
-│  │  ├─ AdLib.engine.csproj
+│  │  ├─ AdLib.Engine.csproj
+│  │  ├─ Plugins
+│  │  │  └─ AdLib.Plugin.OpenApplication.dll
 │  │  ├─ Program.cs
 │  │  └─ Services
 │  │     └─ AdLibPluginLoader.cs
+│  ├─ AdLib.Plugin
+│  │  ├─ AdLib.Plugin.csproj
+│  │  ├─ AdLib.Plugin.OpenApplication.dll
+│  │  └─ Class1.cs
+│  ├─ AdLib.Plugin.OpenApplication
+│  │  ├─ AdLib.Plugin.OpenApplication.csproj
+│  │  └─ Class1.cs
 │  ├─ AdLib.UI
 │  │  ├─ AdLib.UI.csproj
 │  │  ├─ AdLib.UI.csproj.user
@@ -62,13 +72,28 @@ AdLib
 │  │  ├─ AssemblyInfo.cs
 │  │  ├─ AutomationBuilder.xaml
 │  │  ├─ AutomationBuilder.xaml.cs
+│  │  ├─ Behaviors
+│  │  │  └─ DragDropBehavior.cs
+│  │  ├─ Converters
+│  │  │  └─ IntToVisibilityConverter.cs
+│  │  ├─ MainWindow.cs
 │  │  ├─ MainWindow.xaml
 │  │  ├─ MainWindow.xaml.cs
 │  │  ├─ Services
+│  │  │  ├─ ServiceLocator.cs
 │  │  │  └─ WindowSelectionService.cs
-│  │  ├─ WindowSelectionDialog.xaml
-│  │  └─ WindowSelectionDialog.xaml.cs
+│  │  └─ ViewModels
+│  │     ├─ AutomationBuilderViewModel.cs
+│  │     ├─ BaseViewModel.cs
+│  │     └─ ViewModelLocator.cs
 │  └─ AdLibAutomation.sln
+├─ Contracts
+│  ├─ AdLib.Contracts.csproj
+│  ├─ Class1.cs
+│  └─ Interfaces
+│     ├─ IActionFactory.cs
+│     ├─ IActionManager.cs
+│     └─ IAutomationAction.cs
 ├─ Plugins
 │  └─ AdLib.common.dll
 ├─ project-hierarchy.txt

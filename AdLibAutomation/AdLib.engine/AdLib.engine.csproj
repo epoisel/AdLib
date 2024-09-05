@@ -27,7 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdLib.common\AdLib.common.csproj" />
+    <ProjectReference Include="..\..\Contracts\AdLib.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Plugins\" />
   </ItemGroup>
 
 </Project>

@@ -1,85 +1,68 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.IO;
-//using System.Linq;
-//using System.Reflection;
-//using AdLib.Common.Plugins; // Reference to the common interface namespace
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using AdLib.Contracts.Interfaces;
 
-//namespace AdLib.Engine.Services
-//{
-//    public class AdLibPluginLoader
-//    {
-//        private readonly string _pluginDirectory;
-//        private readonly List<IAutomationPlugin> _loadedPlugins;
+namespace AdLib.Engine.Services
+{
+    public class AdLibPluginLoader
+    {
+        private readonly string _pluginDirectory;
+        private readonly List<IAutomationAction> _loadedActions;
 
-//        public AdLibPluginLoader(string pluginDirectory)
-//        {
-//            _pluginDirectory = pluginDirectory;
-//            _loadedPlugins = new List<IAutomationPlugin>();
-//        }
+        public AdLibPluginLoader(string pluginDirectory)
+        {
+            _pluginDirectory = pluginDirectory;
+            _loadedActions = new List<IAutomationAction>();
+        }
 
-//        public IEnumerable<IAutomationPlugin> LoadPlugins()
-//        {
-//            if (!Directory.Exists(_pluginDirectory))
-//            {
-//                Console.WriteLine($"Plugin directory {_pluginDirectory} does not exist.");
-//                return Enumerable.Empty<IAutomationPlugin>();
-//            }
+        public IEnumerable<IAutomationAction> LoadActions()
+        {
+            if (!Directory.Exists(_pluginDirectory))
+            {
+                Debug.WriteLine($"Plugin directory {_pluginDirectory} does not exist.");
+                return Enumerable.Empty<IAutomationAction>();
+            }
 
-//            var pluginFiles = Directory.GetFiles(_pluginDirectory, "*.dll");
+            Console.WriteLine($"Plugin directory {_pluginDirectory} exists.");
 
-//            foreach (var pluginFile in pluginFiles)
-//            {
-//                try
-//                {
-//                    var assembly = Assembly.LoadFrom(pluginFile);
-//                    var pluginTypes = assembly.GetTypes()
-//                        .Where(t => typeof(IAutomationPlugin).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
+            var pluginFiles = Directory.GetFiles(_pluginDirectory, "*.dll");
+            if (pluginFiles.Length == 0)
+            {
+                Debug.WriteLine("No plugin DLLs found in the directory.");
+                return Enumerable.Empty<IAutomationAction>();
+            }
 
-//                    foreach (var type in pluginTypes)
-//                    {
-//                        var plugin = (IAutomationPlugin)Activator.CreateInstance(type);
-//                        plugin.Initialize();
-//                        _loadedPlugins.Add(plugin);
-//                    }
-//                }
-//                catch (Exception ex)
-//                {
-//                    Console.WriteLine($"Failed to load plugin from {pluginFile}: {ex.Message}");
-//                }
-//            }
+            Console.WriteLine($"Found {pluginFiles.Length} plugin files in the directory.");
 
-//            return _loadedPlugins;
-//        }
+            foreach (var pluginFile in pluginFiles)
+            {
+                Debug.WriteLine($"Attempting to load plugin file: {pluginFile}");
+                try
+                {
+                    var assembly = Assembly.LoadFrom(pluginFile);
 
-//        public void ExecuteAllPlugins()
-//        {
-//            foreach (var plugin in _loadedPlugins)
-//            {
-//                try
-//                {
-//                    plugin.Execute();
-//                }
-//                catch (Exception ex)
-//                {
-//                    Console.WriteLine($"Error executing plugin {plugin.Name}: {ex.Message}");
-//                }
-//            }
-//        }
+                    var actionTypes = assembly.GetTypes()
+                        .Where(t => typeof(IAutomationAction).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
 
-//        public void CleanupAllPlugins()
-//        {
-//            foreach (var plugin in _loadedPlugins)
-//            {
-//                try
-//                {
-//                    plugin.Cleanup();
-//                }
-//                catch (Exception ex)
-//                {
-//                    Console.WriteLine($"Error during cleanup of plugin {plugin.Name}: {ex.Message}");
-//                }
-//            }
-//        }
-//    }
-//}
+                    foreach (var type in actionTypes)
+                    {
+                        var action = (IAutomationAction)Activator.CreateInstance(type);
+                        _loadedActions.Add(action);
+                        Debug.WriteLine($"Loaded action from plugin: {action.Name}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Failed to load actions from {pluginFile}: {ex.Message}");
+                }
+            }
+
+            return _loadedActions;
+        }
+
+    }
+}

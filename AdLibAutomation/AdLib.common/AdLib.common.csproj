@@ -8,10 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interfaces\IConfigurableAction.cs" />
-    <Compile Remove="Interfaces\IWindowSelectionService.cs" />
-    <Compile Remove="Services\ProcessService.cs" />
-    <Compile Remove="Utilities\NativeMethods.cs" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +25,10 @@
     <PackageReference Include="Serilog" Version="4.0.1" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
     <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdLib.engine\AdLib.Engine.csproj" />
   </ItemGroup>
 
 </Project>

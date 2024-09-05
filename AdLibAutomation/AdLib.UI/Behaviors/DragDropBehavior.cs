@@ -1,10 +1,12 @@
-﻿using System.Windows;
+﻿// File: DragDropBehavior.cs
+using System.Windows;
 using System.Windows.Input;
 
 namespace AdLib.UI.Behaviors
 {
     public static class DragDropBehavior
     {
+        // DropCommand Attached Property
         public static readonly DependencyProperty DropCommandProperty =
             DependencyProperty.RegisterAttached(
                 "DropCommand",
@@ -47,6 +49,7 @@ namespace AdLib.UI.Behaviors
             }
         }
 
+        // DragOverCommand Attached Property
         public static readonly DependencyProperty DragOverCommandProperty =
             DependencyProperty.RegisterAttached(
                 "DragOverCommand",

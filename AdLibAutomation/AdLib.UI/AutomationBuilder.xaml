@@ -1,8 +1,13 @@
 ﻿<Window x:Class="AdLib.UI.AutomationBuilder"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:behaviors="clr-namespace:AdLib.UI.Behaviors"
+        xmlns:local="clr-namespace:AdLib.UI.Converters"
         Title="AutomationBuilder" Height="450" Width="800">
+
+    <Window.Resources>
+        <!-- Define the IntToVisibilityConverter in your resources -->
+        <local:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
+    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,50 +20,95 @@
         <!-- Toolbox Panel -->
         <StackPanel Name="ToolboxPanel" Grid.Column="0" Background="LightGray">
             <TextBlock Text="Toolbox" FontWeight="Bold" Margin="10"/>
-            <Grid Margin="5">
-                <TextBox Name="SearchTextBox" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBlock Text="Search..." Foreground="Gray"
-                           VerticalAlignment="Center" HorizontalAlignment="Left"
-                           Margin="5,0,0,0" IsHitTestVisible="False">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="Visibility" Value="Collapsed"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Text, ElementName=SearchTextBox}" Value="">
-                                    <Setter Property="Visibility" Value="Visible"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
-            </Grid>
-            <StackPanel Name="ActionButtonsPanel" Margin="5">
-                <!-- Bind dynamically generated buttons for available actions here -->
-            </StackPanel>
+            <ItemsControl ItemsSource="{Binding AvailableActions}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Content="{Binding Name}" 
+                    Command="{Binding DataContext.SelectActionCommand, RelativeSource={RelativeSource AncestorType=Window}}" 
+                    CommandParameter="{Binding}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+                <!-- Handle empty state -->
+                <ItemsControl.Template>
+                    <ControlTemplate TargetType="ItemsControl">
+                        <StackPanel>
+                            <ItemsPresenter/>
+                            <TextBlock Text="No actions available." 
+                           Visibility="{Binding Path=Items.Count, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ItemsControl}, Converter={StaticResource IntToVisibilityConverter}}" 
+                           Foreground="Red" FontWeight="Bold" Margin="5" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </ItemsControl.Template>
+            </ItemsControl>
+
+            <Button Content="Add to Workflow" 
+Command="{Binding AddToWorkflowCommand}" 
+Margin="10,5,10,0" 
+HorizontalAlignment="Center" Grid.Column="0"/>
+
+            <!-- Close the ItemsControl here before placing the Button -->
         </StackPanel>
 
+        
+
         <!-- Workspace Panel -->
-        <Canvas Name="WorkspaceCanvas" Grid.Column="1" Background="WhiteSmoke"
-                AllowDrop="True"
-                behaviors:DragDropBehavior.DropCommand="{Binding DropCommand}"
-                behaviors:DragDropBehavior.DragOverCommand="{Binding DragOverCommand}">
-            <!-- Visual representation of automation tasks will be placed here -->
+        <Canvas Name="WorkspaceCanvas" Grid.Column="1" Background="WhiteSmoke">
+            <!-- Additional workspace elements can go here -->
         </Canvas>
 
-        <!-- Properties Panel -->
+        <!-- Properties Panel (dynamically generated) -->
         <StackPanel Grid.Column="2" Background="LightGray">
             <TextBlock Text="Properties" FontWeight="Bold" Margin="10"/>
-            <StackPanel Name="PropertiesPanelContent" Margin="10"/>
-            <Button Content="Add to Workflow" Command="{Binding AddToWorkflowCommand}" 
-                    Margin="22,282,145,282" Height="20" Width="97"/>
+            <ItemsControl ItemsSource="{Binding SelectedActionProperties}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding PropertyName}" FontWeight="Bold" Margin="5"/>
+
+                            <!-- TextBox for string properties -->
+                            <ContentControl>
+                                <ContentControl.Style>
+                                    <Style TargetType="ContentControl">
+                                        <Style.Triggers>
+                                            <!-- For string properties, show TextBox -->
+                                            <DataTrigger Binding="{Binding PropertyType}" Value="System.String">
+                                                <Setter Property="ContentTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <TextBox Text="{Binding PropertyValue, Mode=TwoWay}" />
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+
+                                            <!-- Add more data triggers here for other types if needed -->
+                                        </Style.Triggers>
+                                    </Style>
+                                </ContentControl.Style>
+                            </ContentControl>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+                <!-- Fallback for when no action is selected -->
+                <ItemsControl.Template>
+                    <ControlTemplate TargetType="ItemsControl">
+                        <StackPanel>
+                            <ItemsPresenter/>
+                            <TextBlock Visibility="{Binding Path=AutomationActions.Count, Converter={StaticResource IntToVisibilityConverter}}" />
+                        </StackPanel>
+                    </ControlTemplate>
+                </ItemsControl.Template>
+            </ItemsControl>
         </StackPanel>
 
         <!-- Execution List -->
         <StackPanel Grid.Column="3" Background="LightGray">
             <ListBox x:Name="ExecutionListBox" 
                      ItemsSource="{Binding AutomationActions}" 
-                     DisplayMemberPath="Name"
                      SelectedItem="{Binding SelectedAction, Mode=TwoWay}" 
+                     DisplayMemberPath="Name"
                      Height="381"/>
             <Button Content="Run Workflow" Command="{Binding RunWorkflowCommand}" Margin="5"/>
         </StackPanel>

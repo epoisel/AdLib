@@ -10,9 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Dialogs\WindowSelectionDialog.cs" />
     <Compile Remove="MainWindow.xaml.cs" />
-    <Compile Remove="MarkupExtensions\ServiceProviderExtension.cs" />
     
     <Compile Remove="Services\WindowSelectionService.cs" />
     <Compile Remove="ViewModels\ViewModelLocator.cs" />
@@ -40,14 +38,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdLib.Automation\AdLib.Automation.csproj" />
-    <ProjectReference Include="..\AdLib.common\AdLib.common.csproj" />
+    <ProjectReference Include="..\..\Contracts\AdLib.Contracts.csproj" />
+    <ProjectReference Include="..\AdLib.common\AdLib.Common.csproj" />
     <ProjectReference Include="..\AdLib.engine\AdLib.engine.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-    <Folder Include="MarkupExtensions\" />
   </ItemGroup>
 
 </Project>

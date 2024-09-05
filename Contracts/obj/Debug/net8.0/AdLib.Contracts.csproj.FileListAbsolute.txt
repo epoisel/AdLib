@@ -1,0 +1,13 @@
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\bin\Debug\net8.0\AdLib.Contracts.deps.json
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\bin\Debug\net8.0\AdLib.Contracts.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\bin\Debug\net8.0\AdLib.Contracts.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.csproj.AssemblyReference.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.AssemblyInfoInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.AssemblyInfo.cs
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.sourcelink.json
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\refint\AdLib.Contracts.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\AdLib.Contracts.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\Contracts\obj\Debug\net8.0\ref\AdLib.Contracts.dll

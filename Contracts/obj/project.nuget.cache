@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kX+sG+L1M1g=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\Contracts\\AdLib.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\epois\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}

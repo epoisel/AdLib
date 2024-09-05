@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdLib.engine", "AdLib.engine\AdLib.engine.csproj", "{E1B08CED-BFE4-4471-BFE9-3C6B6C55FFA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdLib.Engine", "AdLib.engine\AdLib.Engine.csproj", "{E1B08CED-BFE4-4471-BFE9-3C6B6C55FFA9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdLib.UI", "AdLib.UI\AdLib.UI.csproj", "{CE84B95D-E324-4717-8EF6-49E9A19CD16A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdLib.common", "AdLib.common\AdLib.common.csproj", "{E3669938-56DE-488F-B0CA-A48B4451C7B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdLib.Common", "AdLib.common\AdLib.Common.csproj", "{E3669938-56DE-488F-B0CA-A48B4451C7B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{610356A7-1F72-4D91-BCDD-CA4E52BBBE0F} = {610356A7-1F72-4D91-BCDD-CA4E52BBBE0F}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdLib.Automation", "AdLib.Automation\AdLib.Automation.csproj", "{0CA038A0-3FEF-448F-8B54-1382EF42F06F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdLib.Contracts", "..\Contracts\AdLib.Contracts.csproj", "{610356A7-1F72-4D91-BCDD-CA4E52BBBE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdLib.Plugin.OpenApplication", "AdLib.Plugin.OpenApplication\AdLib.Plugin.OpenApplication.csproj", "{AAA8A7FD-08AA-4E67-A6C5-B62E609E6028}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +34,14 @@ Global
 		{E3669938-56DE-488F-B0CA-A48B4451C7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3669938-56DE-488F-B0CA-A48B4451C7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3669938-56DE-488F-B0CA-A48B4451C7B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CA038A0-3FEF-448F-8B54-1382EF42F06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CA038A0-3FEF-448F-8B54-1382EF42F06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CA038A0-3FEF-448F-8B54-1382EF42F06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CA038A0-3FEF-448F-8B54-1382EF42F06F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610356A7-1F72-4D91-BCDD-CA4E52BBBE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610356A7-1F72-4D91-BCDD-CA4E52BBBE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610356A7-1F72-4D91-BCDD-CA4E52BBBE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610356A7-1F72-4D91-BCDD-CA4E52BBBE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA8A7FD-08AA-4E67-A6C5-B62E609E6028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA8A7FD-08AA-4E67-A6C5-B62E609E6028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA8A7FD-08AA-4E67-A6C5-B62E609E6028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA8A7FD-08AA-4E67-A6C5-B62E609E6028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

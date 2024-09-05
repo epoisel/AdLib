@@ -1,10 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Windows;
 using AdLib.UI.ViewModels;
-using AdLib.UI.Services;
 using AdLib.Common.Services;
+using AdLib.Contracts.Interfaces;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using System.IO;
+
 
 namespace AdLib.UI
 {
@@ -17,41 +20,58 @@ namespace AdLib.UI
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
             _serviceProvider = serviceCollection.BuildServiceProvider();
+
+            // Check if serviceProvider is successfully created
+            Debug.WriteLine("ServiceProvider initialized.");
         }
 
         private void ConfigureServices(IServiceCollection services)
         {
             // Register ViewModels and Main Window
-            services.AddSingleton<AutomationBuilderViewModel>();
-            services.AddSingleton<AutomationBuilder>();
+            services.AddSingleton<AutomationBuilderViewModel>(); // ViewModel
+            services.AddSingleton<AutomationBuilder>();          // Main window
 
-            // Register ActionManager - keeping this as it might still be needed even without actions
-            services.AddSingleton<IActionManager, ActionManager>();
+            // Plugin directory for loading actions
+            string pluginDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\AdLib.engine\Plugins\"));
+            Debug.WriteLine($"Resolved plugin directory: {pluginDirectory}");
 
-            // For now, we are not registering specific IAutomationAction implementations
-            // This can be reintroduced once individual actions are ready for refactoring
 
-            // Configure logging
-            services.AddLogging(configure => configure.AddConsole().AddDebug());
+            // Register ActionManager, passing the plugin directory
+            services.AddSingleton<IActionManager>(provider =>
+                new ActionManager(pluginDirectory));
+
+            // Register logging
+            services.AddLogging(configure =>
+            {
+                configure.AddConsole();
+                configure.AddDebug();
+            });
+
+            Debug.WriteLine("Services configured.");
         }
+
+        [System.Runtime.InteropServices.DllImport("kernel32.dll")]
+        private static extern bool AllocConsole();
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
+            AllocConsole();  // Optional: Open the console for logging
 
-            Console.WriteLine("OnStartup called"); // Debug line
+            base.OnStartup(e);
 
             try
             {
+                // Resolve and show the main window
                 var mainWindow = _serviceProvider.GetRequiredService<AutomationBuilder>();
                 mainWindow.Show();
-                Console.WriteLine("Main window shown successfully"); // Debug line
+
+                Console.WriteLine("Main window shown.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error showing main window: {ex.Message}");
+                Debug.WriteLine($"Error showing main window: {ex.Message}");
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                Shutdown(); // Shut down the application if the main window can't be shown
+                Shutdown();
             }
         }
     }

@@ -1,67 +1,109 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
-using Microsoft.Extensions.Logging;
-using AdLib.Common.Services;
-using AdLib.Automation.Interfaces;
+using AdLib.Contracts.Interfaces;
+using AdLib.Contracts.ViewModels;
 using CommunityToolkit.Mvvm.Input;
 
 namespace AdLib.UI.ViewModels
 {
     public class AutomationBuilderViewModel : BaseViewModel
     {
-        private readonly ILogger<AutomationBuilderViewModel> _logger;
         private readonly IActionManager _actionManager;
-
+        public ObservableCollection<IAutomationAction> AvailableActions { get; private set; }
         public ObservableCollection<IAutomationAction> AutomationActions { get; private set; }
-        public ICommand AddToWorkflowCommand { get; private set; }
-        public ICommand RunWorkflowCommand { get; private set; }
+        public ObservableCollection<ActionPropertyViewModel> SelectedActionProperties { get; private set; }
 
-        // Property to hold the search text
-        private string _searchText;
-        public string SearchText
+        private IAutomationAction _selectedAction;
+        public IAutomationAction SelectedAction
         {
-            get => _searchText;
+            get => _selectedAction;
             set
             {
-                if (_searchText != value)
+                if (_selectedAction != value)
                 {
-                    _searchText = value;
-                    OnPropertyChanged(nameof(SearchText));
+                    _selectedAction = value;
+                    OnPropertyChanged(nameof(SelectedAction));
+                    LoadActionProperties();
                 }
             }
         }
 
-        public AutomationBuilderViewModel(ILogger<AutomationBuilderViewModel> logger, IActionManager actionManager)
-        {
-            _logger = logger;
-            _actionManager = actionManager;
+        public ICommand SelectActionCommand { get; private set; }
+        public ICommand AddToWorkflowCommand { get; private set; }
+        public ICommand RunWorkflowCommand { get; private set; }
 
+        public AutomationBuilderViewModel(IActionManager actionManager)
+        {
+            _actionManager = actionManager ?? throw new ArgumentNullException(nameof(actionManager));
+
+            AvailableActions = new ObservableCollection<IAutomationAction>();
             AutomationActions = new ObservableCollection<IAutomationAction>();
+            SelectedActionProperties = new ObservableCollection<ActionPropertyViewModel>();
+
+            LoadActions();
             InitializeCommands();
+        }
+
+        private void LoadActions()
+        {
+            var availableActions = _actionManager.GetAvailableActions();
+            foreach (var action in availableActions)
+            {
+                AvailableActions.Add(action);
+            }
+        }
+
+        private void LoadActionProperties()
+        {
+            SelectedActionProperties.Clear();
+            if (_selectedAction != null)
+            {
+                var properties = _selectedAction.GetProperties();
+                foreach (var property in properties)
+                {
+                    SelectedActionProperties.Add(property);
+                }
+            }
         }
 
         private void InitializeCommands()
         {
-            AddToWorkflowCommand = new RelayCommand<object>(AddToWorkflow, CanAddToWorkflow);
-            RunWorkflowCommand = new RelayCommand<object>(RunWorkflow, CanRunWorkflow);
+            SelectActionCommand = new RelayCommand<IAutomationAction>(action =>
+            {
+                SelectedAction = action;
+            });
+
+            AddToWorkflowCommand = new RelayCommand(AddToWorkflow);
+            RunWorkflowCommand = new RelayCommand(RunWorkflow, CanRunWorkflow);
         }
 
-        private bool CanAddToWorkflow(object parameter) => true;
-
-        private void AddToWorkflow(object parameter)
+        private void AddToWorkflow()
         {
-            // For now, this can just log a message
-            _logger.LogInformation("AddToWorkflowCommand executed.");
+            if (SelectedAction != null)
+            {
+                AutomationActions.Add(SelectedAction);
+                Console.WriteLine($"Action {SelectedAction.Name} added to workflow.");
+            }
         }
 
-        private bool CanRunWorkflow(object parameter) => AutomationActions.Count > 0;
+        private bool CanRunWorkflow() => AutomationActions.Count > 0;
 
-        private void RunWorkflow(object parameter)
+        private void RunWorkflow()
         {
-            // For now, this can just log a message
-            _logger.LogInformation("RunWorkflowCommand executed.");
+            foreach (var action in AutomationActions)
+            {
+                try
+                {
+                    action.Validate();
+                    action.Execute();
+                    Console.WriteLine($"{action.Name} executed successfully.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error executing {action.Name}: {ex.Message}");
+                }
+            }
         }
     }
 }

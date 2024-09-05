@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Controls; // Required for TextBox and TextChangedEventArgs
 using Microsoft.Extensions.DependencyInjection;
 using AdLib.UI.ViewModels;
 
@@ -12,29 +11,15 @@ namespace AdLib.UI
 
         public AutomationBuilder(IServiceProvider serviceProvider)
         {
-            InitializeComponent(); // Initializes XAML components
-            Console.WriteLine("AutomationBuilder constructor called"); // Debug line
+            InitializeComponent();
+            Console.WriteLine("AutomationBuilder constructor called.");
 
             // Set the DataContext to the ViewModel using DI
             _viewModel = serviceProvider.GetRequiredService<AutomationBuilderViewModel>();
             DataContext = _viewModel;
-            Console.WriteLine("DataContext set"); // Debug line
+
+            Console.WriteLine("DataContext set to AutomationBuilderViewModel.");
         }
-
-        // Event handler for the SearchTextBox TextChanged event
-        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            Console.WriteLine("SearchTextBox TextChanged event triggered"); // Debug line
-
-            if (_viewModel != null)
-            {
-                // Set the SearchText property in the ViewModel, which will trigger the filtering
-                _viewModel.SearchText = ((TextBox)sender).Text;
-                Console.WriteLine($"SearchText changed to: {_viewModel.SearchText}"); // Debug line
-            }
-        }
-
-    
     }
 }
 

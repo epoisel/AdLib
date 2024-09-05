@@ -11,8 +11,9 @@
     <Compile Remove="Actions\ClickButtonAction.cs" />
     <Compile Remove="Actions\CloseApplicationAction.cs" />
     <Compile Remove="Actions\FocusApplicationAction.cs" />
-    <Compile Remove="Actions\InputTextAction.cs" />
+ 
     <Compile Remove="Actions\OpenApplication.cs" />
+   
     <Compile Remove="Actions\SubmitAction.cs" />
     
   </ItemGroup>
@@ -35,14 +36,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Actions\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdLib.common\AdLib.common.csproj" />
+    <ProjectReference Include="..\..\Contracts\AdLib.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

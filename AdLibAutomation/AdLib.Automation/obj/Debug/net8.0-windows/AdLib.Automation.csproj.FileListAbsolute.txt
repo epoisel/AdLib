@@ -2,8 +2,8 @@ C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debu
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.Automation.runtimeconfig.json
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.Automation.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.Automation.pdb
-C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.common.dll
-C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.common.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.Contracts.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\bin\Debug\net8.0-windows\AdLib.Contracts.pdb
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\obj\Debug\net8.0-windows\AdLib.Automation.csproj.AssemblyReference.cache
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\obj\Debug\net8.0-windows\AdLib.Automation.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.Automation\obj\Debug\net8.0-windows\AdLib.Automation.AssemblyInfoInputs.cache

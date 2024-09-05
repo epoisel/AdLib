@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D+DkVbTja8A=",
+  "dgSpecHash": "kd2K2G76ytc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.engine.csproj",
+  "projectFilePath": "C:\\Users\\epois\\Documents\\AdLib-2\\AdLib\\AdLibAutomation\\AdLib.engine\\AdLib.Engine.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\epois\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.0\\communitytoolkit.mvvm.8.3.0.nupkg.sha512",
     "C:\\Users\\epois\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
