@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("AdLib.Engine")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("AdLib.engine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ac4ce564e84b33605392c46e3f706309ba84efb")]
-[assembly: System.Reflection.AssemblyProductAttribute("AdLib.Engine")]
-[assembly: System.Reflection.AssemblyTitleAttribute("AdLib.Engine")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2997d6495b310d91e094800960211f8d7364a0b")]
+[assembly: System.Reflection.AssemblyProductAttribute("AdLib.engine")]
+[assembly: System.Reflection.AssemblyTitleAttribute("AdLib.engine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

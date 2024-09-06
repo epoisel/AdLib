@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 
@@ -28,7 +29,18 @@ namespace AdLib.Contracts.ViewModels
         // Optional command to invoke an action (e.g., file browsing)
         public Action BrowseAction { get; set; }
 
-        public ICommand BrowseCommand => new RelayCommand(() => BrowseAction?.Invoke());
+        public ICommand BrowseCommand => new RelayCommand(() =>
+        {
+            if (BrowseAction != null)
+            {
+                Debug.WriteLine("BrowseCommand invoked, BrowseAction is not null.");
+                BrowseAction.Invoke();
+            }
+            else
+            {
+                Debug.WriteLine("BrowseCommand invoked, but BrowseAction is null.");
+            }
+        });
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

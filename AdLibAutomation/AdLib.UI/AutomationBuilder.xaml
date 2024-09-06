@@ -7,6 +7,7 @@
     <Window.Resources>
         <!-- Define the IntToVisibilityConverter in your resources -->
         <local:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
+        <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
     </Window.Resources>
 
     <Grid>
@@ -65,43 +66,17 @@ HorizontalAlignment="Center" Grid.Column="0"/>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="{Binding PropertyName}" FontWeight="Bold" Margin="5"/>
-
-                            <!-- TextBox for string properties -->
-                            <ContentControl>
-                                <ContentControl.Style>
-                                    <Style TargetType="ContentControl">
-                                        <Style.Triggers>
-                                            <!-- For string properties, show TextBox -->
-                                            <DataTrigger Binding="{Binding PropertyType}" Value="System.String">
-                                                <Setter Property="ContentTemplate">
-                                                    <Setter.Value>
-                                                        <DataTemplate>
-                                                            <TextBox Text="{Binding PropertyValue, Mode=TwoWay}" />
-                                                        </DataTemplate>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </DataTrigger>
-
-                                            <!-- Add more data triggers here for other types if needed -->
-                                        </Style.Triggers>
-                                    </Style>
-                                </ContentControl.Style>
-                            </ContentControl>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox Text="{Binding PropertyValue, Mode=TwoWay}" Width="150" />
+                                <Button Content="Browse" Command="{Binding BrowseCommand}"
+                            Visibility="{Binding BrowseAction, Converter={StaticResource NullToVisibilityConverter}}" />
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
-
-                <!-- Fallback for when no action is selected -->
-                <ItemsControl.Template>
-                    <ControlTemplate TargetType="ItemsControl">
-                        <StackPanel>
-                            <ItemsPresenter/>
-                            <TextBlock Visibility="{Binding Path=AutomationActions.Count, Converter={StaticResource IntToVisibilityConverter}}" />
-                        </StackPanel>
-                    </ControlTemplate>
-                </ItemsControl.Template>
             </ItemsControl>
         </StackPanel>
+
 
         <!-- Execution List -->
         <StackPanel Grid.Column="3" Background="LightGray">
@@ -110,7 +85,11 @@ HorizontalAlignment="Center" Grid.Column="0"/>
                      SelectedItem="{Binding SelectedAction, Mode=TwoWay}" 
                      DisplayMemberPath="Name"
                      Height="381"/>
-            <Button Content="Run Workflow" Command="{Binding RunWorkflowCommand}" Margin="5"/>
+            <Button Content="Run Workflow" 
+        Command="{Binding RunWorkflowCommand}" 
+        IsEnabled="{Binding Path=AutomationActions.Count, Converter={StaticResource IntToVisibilityConverter}}"
+        Margin="5"/>
+
         </StackPanel>
     </Grid>
 </Window>

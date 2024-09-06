@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 using AdLib.Contracts.Interfaces;
 using AdLib.Contracts.ViewModels;
@@ -24,6 +25,7 @@ namespace AdLib.UI.ViewModels
                 {
                     _selectedAction = value;
                     OnPropertyChanged(nameof(SelectedAction));
+                    Debug.WriteLine($"Selected action changed to: {_selectedAction?.Name}");
                     LoadActionProperties();
                 }
             }
@@ -62,8 +64,11 @@ namespace AdLib.UI.ViewModels
                 var properties = _selectedAction.GetProperties();
                 foreach (var property in properties)
                 {
+                    Debug.WriteLine($"Loaded property: {property.PropertyName}, BrowseAction: {(property.BrowseAction != null ? "not null" : "null")}");
                     SelectedActionProperties.Add(property);
                 }
+                // Force the UI to refresh
+                OnPropertyChanged(nameof(SelectedActionProperties));
             }
         }
 
@@ -83,7 +88,9 @@ namespace AdLib.UI.ViewModels
             if (SelectedAction != null)
             {
                 AutomationActions.Add(SelectedAction);
-                Console.WriteLine($"Action {SelectedAction.Name} added to workflow.");
+                OnPropertyChanged(nameof(AutomationActions));  // Notify UI about workflow update
+                (RunWorkflowCommand as RelayCommand)?.NotifyCanExecuteChanged();
+                Debug.WriteLine($"Action {SelectedAction.Name} added to workflow.");
             }
         }
 
@@ -97,11 +104,11 @@ namespace AdLib.UI.ViewModels
                 {
                     action.Validate();
                     action.Execute();
-                    Console.WriteLine($"{action.Name} executed successfully.");
+                    Debug.WriteLine($"{action.Name} executed successfully.");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error executing {action.Name}: {ex.Message}");
+                    Debug.WriteLine($"Error executing {action.Name}: {ex.Message}");
                 }
             }
         }

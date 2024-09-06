@@ -1251,9 +1251,9 @@
           "System.Windows.Extensions": "8.0.0"
         },
         "runtime": {
-          "AdLib.Engine.dll": {
+          "AdLib.engine.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": ""
           }
         }
       }

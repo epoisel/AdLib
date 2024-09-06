@@ -2,6 +2,9 @@
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using AdLib.UI.ViewModels;
+using AdLib.Contracts.ViewModels;
+using System.Diagnostics;
+using System.Windows.Controls;
 
 namespace AdLib.UI
 {
@@ -14,11 +17,18 @@ namespace AdLib.UI
             InitializeComponent();
             Console.WriteLine("AutomationBuilder constructor called.");
 
-            // Set the DataContext to the ViewModel using DI
+            // Inject and set the ViewModel
             _viewModel = serviceProvider.GetRequiredService<AutomationBuilderViewModel>();
             DataContext = _viewModel;
 
             Console.WriteLine("DataContext set to AutomationBuilderViewModel.");
+        }
+
+
+        private void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            var dataContext = (ActionPropertyViewModel)e.NewValue;
+            Debug.WriteLine($"Button DataContext: {dataContext}");
         }
     }
 }

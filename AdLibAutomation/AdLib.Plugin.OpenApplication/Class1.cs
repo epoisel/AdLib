@@ -43,7 +43,8 @@ namespace AdLib.Plugin.OpenApplication
                     PropertyName = "Action Name",
                     PropertyType = typeof(string).FullName,
                     PropertyValue = _actionName,
-                    SetProperty = value => _actionName = (string)value // Allows the UI to modify the action name
+                    SetProperty = value => _actionName = (string)value,// Allows the UI to modify the action name
+                    BrowseAction = null // No BrowseAction needed for the Action Name property
                 },
                 new ActionPropertyViewModel
                 {
@@ -58,15 +59,23 @@ namespace AdLib.Plugin.OpenApplication
 
         private void BrowseForExecutable()
         {
-            var openFileDialog = new OpenFileDialog
+            System.Windows.Application.Current.Dispatcher.Invoke(() =>
             {
-                Filter = "Executable files (*.exe)|*.exe"
-            };
+                Debug.WriteLine("BrowseForExecutable invoked.");
+                var openFileDialog = new OpenFileDialog
+                {
+                    Filter = "Executable files (*.exe)|*.exe"
+                };
 
-            if (openFileDialog.ShowDialog() == true)
-            {
-                _applicationPath = openFileDialog.FileName;
-            }
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    _applicationPath = openFileDialog.FileName;
+                }
+                else
+                {
+                    Debug.WriteLine("File dialog was cacelled.");
+                }
+            });
         }
 
         public void Configure(IServiceProvider serviceProvider)

@@ -3,8 +3,8 @@ C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\ne
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.Common.dll
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.Common.pdb
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.Contracts.dll
-C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.Engine.dll
-C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.Engine.pdb
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.engine.dll
+C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.engine.pdb
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\bin\Debug\net8.0-windows\AdLib.Contracts.pdb
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.Common.csproj.AssemblyReference.cache
 C:\Users\epois\Documents\AdLib-2\AdLib\AdLibAutomation\AdLib.common\obj\Debug\net8.0-windows\AdLib.Common.GeneratedMSBuildEditorConfig.editorconfig
